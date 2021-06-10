@@ -1,0 +1,57 @@
+.tabgroup {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.tabgroup .tablist {
+    display: flex;
+    border-block-end: 1px solid #2a4765;
+}
+
+.tabgroup .tab {
+    padding: .5em 1em;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.tabgroup .tab:hover {
+    background-color: #2a4765;
+    color: white;
+}
+
+.tabgroup .tab.active::after {
+    content: '';
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+}
+
+.tabgroup .contentlist {
+    width: 100%;
+    height: 15em;
+    position: relative;
+}
+
+.tabgroup .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2a4765;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tabgroup .content.active {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.tabgroup .content p {
+    width: 100%;
+}

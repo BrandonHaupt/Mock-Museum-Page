@@ -1,0 +1,136 @@
+/*This sets the height to 77 vh wont go below 15em, need to try to remember what positions do*/
+.carousel {
+    height: 75vh;
+    min-height: 13em;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.carousel img {
+    width: 60%;
+}
+
+.carousel .slide,
+.carousel .slides {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .slides {
+    position: relative;
+}
+
+.carousel .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity: 0;
+}
+
+/*This gives the carousel a sliding animation of 3 seconds*/
+.carousel .slide.moving {
+    transition: all 0.3s;
+}
+
+.carousel .slide.left,
+.carousel .slide.right,
+.carousel .slide.center {
+    opacity: 1;
+}
+
+.carousel .slide.center {
+    transform: translateX(0);
+}
+
+/*When you click the left arrow it will move the picture left all the way off the screen*/
+.carousel .slide.left {
+    transform: translateX(-100%);
+}
+
+/*When you click the right arrow it will move to the next picture*/
+.carousel .slide.right {
+    transform: translateX(100%);
+}
+
+/*Makes the controls have no pointer event and user select event and puts them ontop of the pictures*/
+.carousel .controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 5;
+}
+
+/*This weird function(?) selects all of the classes that are similar to "control-"*/
+.carousel [class*='control-'] {
+    pointer-events: initial;
+}
+
+/*Changes the "<" and ">" to where it is 50% of the vh of the picture, gives it a padding and then makes the font-size("<" ">") bigger and then changes the color to black.*/
+.carousel .control-left,
+.carousel .control-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 3px;
+    font-size: 3em;
+    color: black;
+}
+
+.carousel .control-left:hover,
+.carousel .control-right:hover,
+.control-pagination .control-dots:hover {
+    color: #2a4765;
+}
+
+/*Makes the "<" on the left side of the picture*/
+.carousel .control-left {
+    left: .5em;
+}
+
+/*Makes the ">" on the right side of the picture*/
+.carousel .control-right {
+    right: .5em;
+}
+
+/*Give the 3 dots a diplay flex and positions them on the bottom of the picture.*/
+.carousel .control-pagination {
+    display: flex;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+}
+
+/*Give the dots a space between each of them, as well as makes them bigger and gives them a slight transition when loading the page.*/
+.carousel .control-dot {
+    padding: 1rem;
+    font-size: 2em;
+    line-height: 1rem;
+    transition: all 0.3s;
+    position: relative;
+    transform: scale(1, 1);
+}
+
+/*Once the dot is active one will have a bigger size and change the color to white*/
+.carousel .control-dot.active {
+    transform: scale(1.5, 1.5);
+    color: white;
+}
+
+
+/*Sets the cursor for the dot, left, and right pointers*/
+.carousel .control-dot,
+.carousel .control-left,
+.carousel .control-right {
+    cursor: pointer;
+}
