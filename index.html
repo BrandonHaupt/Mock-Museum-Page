@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Museum</title>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/tabs.css">
+    <link rel="stylesheet" href="./css/carousel.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/tabs.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="onPage">Home</a>
+            <a href="./artist.html">Artist</a>
+            <a href="./artwork.html">Artwork</a>
+            <a href="./otherwork.html">Other Work</a>
+        </nav>
+
+        <div class="menu-btn">
+            <div class="burger"></div>
+        </div>
+    </header>
+
+
+    <h1>MET Museum</h1>
+    <main>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide center">
+                    <img src="./img/metmuseum_1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/metmuseum_2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./img/metmuseum_3.jpg" alt="">
+                </div>
+
+                <div class="controls">
+                    <div class="control-left">&lt;</div>
+                    <div class="control-right">&gt;</div>
+                    <div class="control-pagination">
+                        <div class="control-dot">&bullet;</div>
+                        <div class="control-dot">&bullet;</div>
+                        <div class="control-dot">&bullet;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabgroup">
+            <div class="tablist">
+                <div class="tab active">About</div>
+                <div class="tab">Location</div>
+                <div class="tab">Hours</div>
+                <div class="tab">Contact</div>
+            </div>
+
+            <div class="contentlist">
+                <div class="content active">
+                    <p>The Metropolitan Museum of Art, "Met Museum" located in New York City, was created on April 13th,
+                        1870, which is 149 years go. The museum is the largest art museum in the United States with
+                        around 7 million visitors to it three locations in 2018. The museum contains a permanent
+                        collection of over two million different art works which is divded among seventeen departments.
+                    </p>
+                </div>
+                <div class="content">
+                    <address>
+                        <p>
+                            Visit us at: <br>
+                            1000 5th Ave <br>
+                            New York <br>
+                            NY 10028 <br>
+                            Phone: 212-535-7710</p>
+                    </address>
+                </div>
+                <div class="content">
+                    <p>
+                        Sunday 10AM–5:30PM<br>
+                        Monday 10AM–5:30PM<br>
+                        Tuesday 10AM–5:30PM<br>
+                        Wednesday 10AM–5:30PM<br>
+                        Thursday 10AM–5:30PM<br>
+                        Friday 10AM–9PM<br>
+                        Saturday 10AM–9PM</p>
+                </div>
+                <div class="content">
+                    <p>If you have questions either call at 212-535-7710 or email us at: communications@metmuseum.org
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>WNM 601 - Brandon Haupt</p>
+    </footer>
+
+    <script type="text/javascript" src="/wnm601/m9/js/main.js"></script>
+    <script type="text/javascript" src="/wnm601/m9/js/carousel.js"></script>
+
+    <script type="text/javascript">
+        new Carousel({
+            element: $(".carousel").eq(0),
+            timing: 6000
+        });
+    </script>
+</body>
+
+</html>
